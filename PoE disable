@@ -1,0 +1,8 @@
+:local botID "bot_ID:token_ID"
+:local myChatID "chat_ID"
+:local name [/system  identity  get name]
+:local a [/sys clock get date]
+:local b [/sys clock get time]
+
+/interface ethernet poe set ether5 poe-out=off
+/tool fetch keep-result=no url=("https://api.telegram.org/".$botID."/sendmessage?chat_id=".$myChatID."&text= $a $b $name WiFi Disabled")

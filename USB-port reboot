@@ -1,0 +1,8 @@
+:local botID "bot_ID:bot_token"
+:local myChatID "chat_ID"
+:local name [/system  identity  get name]
+:local a [/sys clock get date]
+:local b [/sys clock get time]
+
+/system routerboard usb power-reset duration=10s
+/tool fetch keep-result=no url=("https://api.telegram.org/".$botID."/sendmessage?chat_id=".$myChatID."&text= $a $b $name USB Device Rebooted")

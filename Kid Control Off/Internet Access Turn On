@@ -1,0 +1,9 @@
+:local botID "bot_ID:bot_token"
+:local myChatID "chat_ID"
+:local name [/system  identity  get name]
+:local a [/sys clock get date]
+:local b [/sys clock get time]
+
+/ip kid-control disable Yana
+/ip firewall filter disable numbers=1
+/tool fetch keep-result=no url=("https://api.telegram.org/".$botID."/sendmessage?chat_id=".$myChatID."&text= $a $b $name Full Access to Inet for Yana Enabled")

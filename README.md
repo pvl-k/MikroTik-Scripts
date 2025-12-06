@@ -93,6 +93,50 @@ You now have two important values:
 
 You'll configure these in the format: `botID:bot_token` for scripts (e.g., `123456789:ABCdefGHIjklMNOpqrsTUVwxyz`)
 
+#### Step 1.4: Configure Bot Commands Menu (Optional but Recommended)
+
+To make bot usage easier, you can configure a menu of commands that appears when you type "/" in the chat with your bot.
+
+1. **Open chat with [@BotFather](https://t.me/botfather)**
+2. **Send** `/setcommands`
+3. **Select your bot** from the list
+4. **Send the following command list** (copy and paste exactly as shown):
+
+```
+Kid Control Off (Internet Access Turn On) - Enable full internet access
+Kid Control On (Internet Access Turn Off) - Block internet completely
+Enable Access to only Stepik on Yana's Devices - Allow only Stepik.org access
+USB-port reboot - Reboot USB device
+PoE Enable - Turn on WiFi access point
+PoE Disable - Turn off WiFi access point
+Test Message to Telegram - Test bot connectivity
+```
+
+**Format explanation:**
+- Each line follows: `CommandName - Description`
+- Command name must **exactly match** your script name in MikroTik
+- Description can be anything (shows in the menu)
+
+5. **BotFather will confirm** with "Success! Command list updated."
+
+6. **Test it**: Open your bot chat and type "/" - you should see all commands in a convenient menu!
+
+**Alternative: Using Shorter Command Names**
+
+If you prefer shorter commands, you can create additional scripts in MikroTik with simpler names and configure them here:
+
+```
+internet_on - Enable full internet access
+internet_off - Block internet completely
+stepik_only - Allow only Stepik.org access
+usb_reboot - Reboot USB device
+wifi_on - Turn on WiFi access point
+wifi_off - Turn off WiFi access point
+test - Test bot connectivity
+```
+
+**Note:** If you use shorter names, you must create scripts with these exact names in MikroTik (System → Scripts).
+
 ### 2. MikroTik Router Configuration
 
 #### Step 2.1: Access Router Terminal

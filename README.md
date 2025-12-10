@@ -24,7 +24,7 @@ This project provides a Telegram-controlled interface for managing network acces
 
 - **🔐 Remote Parental Control**
   - Enable/disable internet access completely for specific devices
-  - Whitelist mode: allow access ONLY to educational sites (e.g., Stepik) via firewall rules
+  - Whitelist mode: allow access ONLY to educational sites (e.g., Coursera, Udemy, Stepik...) via firewall rules
   - Real-time status notifications via Telegram
 
 - **⚡ Device Management**
